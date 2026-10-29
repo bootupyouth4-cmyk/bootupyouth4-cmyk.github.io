@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name</title>
+  <meta name="description" content="Personal website of Your Name.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #eef2f6;
+      --text: #14213d;
+      --muted: #4b5a73;
+      --accent: #2455e8;
+      --line: #c9d3e0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1726;
+        --text: #e8edf6;
+        --muted: #9fb0c9;
+        --accent: #7fa2ff;
+        --line: #26334d;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: 1.125rem;
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-underline-offset: 3px; }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+    .wrap { max-width: 44rem; margin: 0 auto; padding: 0 1.5rem; }
+
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 0;
+    }
+    header.site .logo { font-weight: 800; text-decoration: none; color: var(--text); }
+    header.site nav { display: flex; gap: 1.5rem; }
+    header.site nav a { color: var(--muted); text-decoration: none; }
+    header.site nav a:hover { color: var(--accent); }
+
+    .hero { padding: 5rem 0 4rem; }
+    .hero h1 {
+      font-size: clamp(2.75rem, 9vw, 5.5rem);
+      line-height: 1;
+      letter-spacing: -0.03em;
+      font-weight: 800;
+      margin: 0 0 1.5rem;
+    }
+    .hero p { max-width: 34rem; margin: 0; color: var(--muted); font-size: 1.25rem; }
+
+    section { padding: 3rem 0; border-top: 1px solid var(--line); }
+    h2 { font-size: 1.5rem; margin: 0 0 1.5rem; letter-spacing: -0.01em; }
+
+    .projects { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.75rem; }
+    .projects h3 { margin: 0; font-size: 1.2rem; }
+    .projects p { margin: 0.25rem 0 0; color: var(--muted); }
+
+    footer { padding: 3rem 0 4rem; color: var(--muted); font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <a class="logo" href="#top">Your Name</a>
+      <nav aria-label="Main">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <div class="hero">
+        <h1>Hi, I'm Your Name.</h1>
+        <p>I build small, useful things for the web. This is my first site, hosted on GitHub Pages.</p>
+      </div>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul class="projects">
+          <li>
+            <h3><a href="https://github.com/your-username/project-one">Project one</a></h3>
+            <p>A short sentence about what it does and who it's for.</p>
+          </li>
+          <li>
+            <h3><a href="https://github.com/your-username/project-two">Project two</a></h3>
+            <p>Another short description. Swap these out for your real work.</p>
+          </li>
+          <li>
+            <h3><a href="https://github.com/your-username/project-three">Project three</a></h3>
+            <p>Add or remove list items as you need.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="about">
+        <h2>About</h2>
+        <p>Write a few lines about yourself here: what you do, what you're learning, and what you like working on.</p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>The easiest way to reach me is <a href="mailto:you@example.com">you@example.com</a>, or find me on <a href="https://github.com/your-username">GitHub</a>.</p>
+      </section>
+    </main>
+
+    <footer>
+      <span id="year"></span> Your Name
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = "© " + new Date().getFullYear();
+  </script>
+</body>
+</html>
